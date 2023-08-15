@@ -36,10 +36,10 @@ public class Dashboard extends AppCompatActivity {
 
             }
         });
-        btnLihat.setOnClickListener(new View.OnClickListener(){
+        btnInfo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent info = new Intent(Dashboard.this, ListDataActivity.class);
+                Intent info = new Intent(Dashboard.this, InformasiActivity.class);
                 startActivity(info);
 
             }
