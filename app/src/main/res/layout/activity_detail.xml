@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:backgroundTint="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:id="@+id/logo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/nomor"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Nomor"
+        android:drawableLeft="@drawable/baseline_mode_edit_24"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/nama"
+        android:layout_below="@id/nomor"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Nama"
+        android:drawableLeft="@drawable/baseline_people_24"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tanggal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Tanggal Lahir"
+        android:drawableLeft="@drawable/baseline_date_range_24"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/jk"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Jenis Kelamin"
+        android:layout_below="@+id/tanggal"
+        android:drawableLeft="@drawable/baseline_person_outline_24"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/alamat"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Alamat"
+        android:layout_below="@+id/jk"
+        android:drawableLeft="@drawable/baseline_home_24"
+        android:drawablePadding="10dp"
+        />
+
+
+</RelativeLayout>
