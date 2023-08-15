@@ -33,10 +33,10 @@ public class login extends AppCompatActivity {
            @Override
            public void onClick(View v){
                 if(username.getText().toString().equalsIgnoreCase(setusername) && password.getText().toString().equalsIgnoreCase(setpassword)){
-                    Intent login = new Intent(login.this, ListDataActivity.class);
+                    Intent login = new Intent(login.this, LoginSuccess.class);
                     startActivity(login);
 
-                    Toast.makeText(login.this, "LOGIN BERHASIL", Toast.LENGTH_SHORT).show();
+
                 }else{
                     Toast.makeText(login.this, "LOGIN GAGAL", Toast.LENGTH_SHORT).show();
                 }
