@@ -1,5 +1,6 @@
 package com.example.vsga_ujikompetensi;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class CreateActivity extends AppCompatActivity {
@@ -15,11 +17,13 @@ public class CreateActivity extends AppCompatActivity {
     dbhelper database;
     Button btn_simpan;
     EditText nomor, nama, tanggal, jk, alamat;
+    ImageButton actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
+        actionBar = findViewById(R.id.backButton);
 
         database = new dbhelper(this);
         nomor = findViewById(R.id.nomor);
@@ -44,5 +48,15 @@ public class CreateActivity extends AppCompatActivity {
                 finish();
             }
         });
+        actionBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Kembali ke halaman sebelumnya
+            }
+        });
+
+
     }
+
+
 }

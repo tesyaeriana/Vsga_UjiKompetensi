@@ -5,17 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
     protected Cursor cursor;
     dbhelper database;
     TextView nomor, nama, tanggal, jk, alamat;
-
+    ImageButton actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        actionBar = findViewById(R.id.backButton);
 
         database = new dbhelper(this);
         nomor = findViewById(R.id.nomor); // Pastikan id-nya sesuai dengan layout
@@ -62,5 +65,12 @@ public class DetailActivity extends AppCompatActivity {
 
 
         cursor.close();
+        actionBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Kembali ke halaman sebelumnya
+            }
+        });
     }
+
 }

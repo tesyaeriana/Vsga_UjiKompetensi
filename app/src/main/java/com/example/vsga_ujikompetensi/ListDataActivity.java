@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,12 +22,12 @@ public class ListDataActivity extends AppCompatActivity {
     protected Cursor cursor;
     dbhelper database;
     public static ListDataActivity ma;
-
+    ImageButton actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_data);
-
+        actionBar = findViewById(R.id.backButton);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,5 +98,12 @@ public class ListDataActivity extends AppCompatActivity {
                 builder.create().show();
             }
         });
+        actionBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Kembali ke halaman sebelumnya
+            }
+        });
+
     }
 }

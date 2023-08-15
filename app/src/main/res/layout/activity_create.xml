@@ -5,18 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateActivity">
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:backgroundTint="#FFFFFF"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo"
-        android:id="@+id/logo"/>
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:src="@drawable/baseline_arrow_back_24" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Tambah Mahasiswa"
+        android:textSize="15dp"
+        android:layout_below="@+id/backButton"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp">
+    </TextView>
+
+
+
     <TextView
         android:layout_width="match_parent"
         android:id="@+id/viewnomor"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
+        android:layout_below="@+id/title"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -31,6 +50,7 @@
         android:layout_marginEnd="20dp"
         android:drawableLeft="@drawable/baseline_mode_edit_24"
         android:inputType="text"
+        android:drawablePadding="20dp"
        ></EditText>
     <TextView
         android:layout_width="match_parent"
@@ -51,6 +71,7 @@
         android:layout_marginEnd="20dp"
         android:drawableLeft="@drawable/baseline_people_24"
         android:inputType="text"
+        android:drawablePadding="20dp"
         />
     <TextView
         android:layout_width="match_parent"
@@ -71,7 +92,7 @@
         android:layout_marginEnd="20dp"
         android:drawableLeft="@drawable/baseline_date_range_24"
         android:hint="dd/mm/yy"
-
+        android:drawablePadding="20dp"
         />
     <TextView
         android:layout_width="match_parent"
@@ -93,6 +114,7 @@
         android:drawableLeft="@drawable/baseline_person_outline_24"
         android:hint="P/L"
         android:inputType="text"
+        android:drawablePadding="20dp"
         />
     <TextView
         android:layout_width="match_parent"
@@ -103,6 +125,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="Alamat"
+
         />
     <EditText
         android:layout_width="match_parent"
@@ -113,6 +136,7 @@
         android:layout_marginEnd="20dp"
         android:drawableLeft="@drawable/baseline_home_24"
         android:inputType="text"
+        android:drawablePadding="20dp"
         />
     <Button
         android:layout_width="match_parent"

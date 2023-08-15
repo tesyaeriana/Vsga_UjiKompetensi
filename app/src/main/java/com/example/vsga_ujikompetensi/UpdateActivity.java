@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class UpdateActivity extends AppCompatActivity {
@@ -16,12 +17,12 @@ public class UpdateActivity extends AppCompatActivity {
     dbhelper database;
     Button btn_simpan;
     EditText nomor, nama, tanggal, jk, alamat;
-
+    ImageButton actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
-
+        actionBar = findViewById(R.id.backButton);
         database = new dbhelper(this);
         nomor = findViewById(R.id.nomor);
         nama = findViewById(R.id.nama);
@@ -79,6 +80,12 @@ public class UpdateActivity extends AppCompatActivity {
                 Toast.makeText(UpdateActivity.this, "Data berhasil diupdate", Toast.LENGTH_SHORT).show();
                 ListDataActivity.ma.RefreshList();
                 finish();
+            }
+        });
+        actionBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Kembali ke halaman sebelumnya
             }
         });
     }
