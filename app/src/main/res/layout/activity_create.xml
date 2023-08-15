@@ -5,29 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateActivity">
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/backButtonContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:padding="8dp"
-        android:src="@drawable/baseline_arrow_back_24" />
+        android:orientation="horizontal"
+        android:background="#F86F03"
+        android:padding="8dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/title"
-        android:text="Tambah Mahasiswa"
-        android:textSize="15dp"
-        android:layout_below="@+id/backButton"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:layout_marginStart="20dp"
-
-        android:layout_marginEnd="20dp">
-    </TextView>
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_arrow_back_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Mahasiswa"
+            android:textColor="#ffff"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:paddingStart="8dp" />
+    </LinearLayout>
 
 
 
@@ -35,7 +39,7 @@
         android:layout_width="match_parent"
         android:id="@+id/viewnomor"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/backButtonContainer"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -144,6 +148,7 @@
         android:layout_below="@+id/alamat"
         android:id="@+id/buttonsimpan"
         android:text="Simpan"
+        android:backgroundTint="#525FE1"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
 </RelativeLayout>

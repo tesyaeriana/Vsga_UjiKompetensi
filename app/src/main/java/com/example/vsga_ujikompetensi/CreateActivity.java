@@ -43,7 +43,7 @@ public class CreateActivity extends AppCompatActivity {
                         tanggal.getText().toString() + "','" +
                         jk.getText().toString() + "','" +
                         alamat.getText().toString() + "')");
-                Toast.makeText(CreateActivity.this, "Data Tersimpan", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CreateActivity.this, "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
                 ListDataActivity.ma.RefreshList();
                 finish();
             }
