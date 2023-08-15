@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:orientation="horizontal"
         android:background="#F86F03"
-        android:padding="8dp">
+        android:padding="15dp">
 
         <ImageButton
             android:id="@+id/backButton"
@@ -30,6 +30,7 @@
             android:textColor="#ffff"
             android:layout_gravity="center_vertical"
             android:textStyle="bold"
+            android:textSize="16sp"
             android:paddingStart="8dp" />
     </LinearLayout>
     <ImageView
